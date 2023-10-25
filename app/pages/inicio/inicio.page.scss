@@ -1,0 +1,28 @@
+.fondo-inicio{
+ background-color:cornsilk;
+}
+.boton-centro-login{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    padding-top: 50%;
+    padding-left: 10%;
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+
+.boton-centro-registr{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    
+    padding-left: 10%;
+    width: 250px;
+    
+}
+.boton-centro-login + .boton-centro-registr{
+    margin-top: 40px;
+}

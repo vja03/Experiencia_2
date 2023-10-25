@@ -1,0 +1,31 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "prueba",
+      "email": "ola",
+      "password": "123",
+      "rol": "docente",
+      "asignatura": "matematicas",
+      "isactive": true
+    },
+    {
+      "id": 716796400,
+      "username": "ola",
+      "email": "olis",
+      "password": "1234",
+      "rol": "xd",
+      "asignatura": "dx",
+      "isactive": true
+    },
+    {
+      "id": 242168569,
+      "username": "wddadsd",
+      "email": "sadsad",
+      "password": "sadas",
+      "rol": "",
+      "asignatura": "",
+      "isactive": true
+    }
+  ]
+}

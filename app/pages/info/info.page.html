@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">info</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-card>
+    <img src="assets/mafia.jpg" class="ion-padding contenido-fondo">
+    <ion-card-header class="contenido-fondo">
+      <ion-card-title style="color:white; font-weight: bold;">¿Como funciona nuestra App? </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="contenido-fondo">
+      <p class="parrafo" >
+        Al iniciar su sesion. deberia llegarle un codigo QR que el profe generara cuando este ingrese desde a la pagina web.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+     </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Crear Cuenta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <ion-card>
+          <ion-card-content>
+            <form (ngSumbit)="crearUser()" #registroForm="ngForm" class="registrarForm">
+            
+              <ion-list>
+                
+              
+                <ion-item >
+                  <ion-label class="itemback" >Nombre<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input  required [(ngModel)]="newUser.username" name="username" type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">E-mail<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required [(ngModel)]="newUser.email" name="email" type="email" placeholder="..."></ion-input>
+                </ion-item>
+
+                <ion-item> 
+                  <ion-label position="floating">Password<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required [(ngModel)]="newUser.password" name="password" type="password" placeholder="..."></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Rol<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-select value="alumno" multiple="false" placeholder="seleccionar rol" [(ngModel)]="newUser.rol">
+                      <ion-select-option required value="alumno" [(ngModel)]="newUser.rol" name="rol" type="text">Alumno</ion-select-option>
+                      <ion-select-option required value="docente" [(ngModel)]="newUser.rol" name="rol" type="text">Docente</ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item *ngIf="rolControl?.value === 'docente'">
+                  <ion-label position="floating">Asignatura<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-select value="ninguna" multiple="false" plaeholder="ola" [(ngModel)]="newUser.rol">
+                    <ion-select-option required value="matematicas" [(ngModel)]="newUser.asignatura" name="asignatura" type="text"></ion-select-option>
+                    <ion-select-option required value="lenguaje"  [(ngModel)]="newUser.asignatura" name="asignatura "  type="text"></ion-select-option>
+                    <ion-select-option required value="ninguna" [(ngModel)]="newUser.asignatura" name="asignatura"></ion-select-option>
+                  </ion-select>  
+                </ion-item>
+              </ion-list>
+
+              <ion-button expand="block" (click)="crearUser()" fill="clear" shape="round" 
+                          color="primary" type="submit" [disabled]="registroForm.invalid">
+                Registrar
+              </ion-button>
+            </form> 
+
+
+          </ion-card-content>      
+    </ion-card>   
+
+
+
+  
+
+</ion-content>
